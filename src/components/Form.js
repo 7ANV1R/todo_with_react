@@ -1,5 +1,6 @@
 import React from 'react';
-
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import "./Form.css"
 function Form({ inputText, setInputText, todos, setTodos }) {
  const inputTextHandler = (e) => {
   console.log(e.target.value);
@@ -10,16 +11,26 @@ function Form({ inputText, setInputText, todos, setTodos }) {
   e.preventDefault();
   setTodos([
    ...todos, {text: inputText, completed: false, id: Math.random()* 1000}
-  ])
+  ]);
+  setInputText('');
  }
  
   return (
-   <form action="">
-    <input onChange={inputTextHandler} type="text" />
-    <button onClick={onAddButton}>
-     <i>+</i>
+    <div >
+      <form action="">
+        <div className="form-body">
+        <input className='input-box' value={inputText} onChange={inputTextHandler} type="text" />
+    <button className='add-btn' onClick={onAddButton}>
+     <AddBoxIcon />
     </button>
-   </form>
+        </div>
+        
+      </form>
+      
+    
+   
+    </div>
+   
   );
 }
 

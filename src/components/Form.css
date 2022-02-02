@@ -1,0 +1,22 @@
+.form-body {
+  display: flex;
+}
+
+.input-box {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.input-box:focus {
+  outline: none;
+}
+
+.add-btn {
+  background-color: white;
+  color: #dc3522;
+
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+}
